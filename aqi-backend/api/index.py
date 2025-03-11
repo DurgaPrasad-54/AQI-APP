@@ -25,7 +25,7 @@ def get_aqi_bucket(aqi_value):
 
 # Load dataset
 
-df = pd.read_csv(r"C:\Users\prasa\OneDrive\Desktop\AQI APP\AQI-APP\aqi-backend\city_day_cleaned.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/DurgaPrasad-54/AQI-APP/main/aqi-backend/city_day_cleaned.csv")
 
 
 df = df.drop(columns=["City", "Date", "AQI_Bucket"], errors="ignore")
