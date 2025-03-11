@@ -7,7 +7,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Enable CORS for cross-origin requests
 
 def get_aqi_bucket(aqi_value):
     if aqi_value <= 50:

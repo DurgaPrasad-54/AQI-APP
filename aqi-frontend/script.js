@@ -10,22 +10,21 @@ document.getElementById("aqiForm").addEventListener("submit", async function (ev
 
     // Validate inputs
     if ([pm25, pm10, no2, so2, o3].some(isNaN)) {
-        showResult("Please ensure all fields are filled with valid numbers.", "red");
+        showResult("Please enter valid numbers for all fields.", "red");
         return;
     }
 
     try {
-        // Display loading feedback
+        // Show loading message
         showResult("Predicting AQI... Please wait.", "blue");
 
-        // Fetch prediction from API
-        const response = await fetch("https://aqi-app-2-1wi7.onrender.com/predict", {
+        // Fetch prediction from Render backend
+        const response = await fetch("https://aqi-app-2-1wi7.onrender.com/predict", {  // Updated URL
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ "PM2.5": pm25, "PM10": pm10, "NO2": no2, "SO2": so2, "O3": o3 })
         });
 
-        // Handle response
         if (!response.ok) throw new Error(`Server error: ${response.status}`);
 
         const data = await response.json();
