@@ -24,9 +24,7 @@ def get_aqi_bucket(aqi_value):
         return "Severe"
 
 # Load dataset
-
 df = pd.read_csv("https://raw.githubusercontent.com/DurgaPrasad-54/AQI-APP/main/aqi-backend/city_day_cleaned.csv")
-
 
 df = df.drop(columns=["City", "Date", "AQI_Bucket"], errors="ignore")
 df = df.apply(pd.to_numeric, errors="coerce")
@@ -62,4 +60,5 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get("PORT", 5000))  # Get PORT from environment
+    app.run(host="0.0.0.0", port=port)  # Bind to all network interfaces
