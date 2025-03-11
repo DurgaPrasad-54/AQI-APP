@@ -1,0 +1,94 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #5f2c82, #49a09d);
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    border: 1px solid #49a09d;
+}
+
+button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #fff;
+    color: #49a09d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-3px);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
