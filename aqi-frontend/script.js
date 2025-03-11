@@ -19,7 +19,7 @@ document.getElementById("aqiForm").addEventListener("submit", async function (ev
         showResult("Predicting AQI... Please wait.", "blue");
 
         // Fetch prediction from API
-        const response = await fetch("https://aqi-backend.vercel.app/api", {
+        const response = await fetch("http://127.0.0.1:5000/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ "PM2.5": pm25, "PM10": pm10, "NO2": no2, "SO2": so2, "O3": o3 })
