@@ -20,7 +20,7 @@ body {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     text-align: center;
-    width: 100%;
+    width: 90%; /* Adjust width for smaller screens */
 }
 
 h1 {
@@ -49,7 +49,8 @@ form {
 }
 
 input[type="number"] {
-    width: 100%;
+    width: 100%; /* Consistent size for all inputs */
+    max-width: 380px;
     padding: 12px;
     font-size: 1rem;
     border: none;
@@ -91,4 +92,41 @@ button:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    input[type="number"] {
+        max-width: 100%; /* Adjust input size for smaller screens */
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #result {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 426px) {
+    #o3 {
+        width: 100%;
+        max-width: 340px;
+        /* background-color: yellow; */
+    }
 }
