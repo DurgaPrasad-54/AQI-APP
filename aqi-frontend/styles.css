@@ -50,7 +50,7 @@ form {
 
 input[type="number"] {
     width: 100%; /* Consistent size for all inputs */
-    max-width: 380px;
+    max-width: 375px;
     padding: 12px;
     font-size: 1rem;
     border: none;
@@ -95,7 +95,7 @@ button:hover {
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: px) {
+/* @media (max-width: px) {
     .container {
         max-width: 90%;
         padding: 20px;
@@ -110,7 +110,7 @@ button:hover {
     }
 
     input[type="number"] {
-        max-width: 100%; /* Adjust input size for smaller screens */
+        max-width: 100%; 
     }
 
     button {
@@ -121,12 +121,16 @@ button:hover {
     #result {
         font-size: 1rem;
     }
-}
+} */
 
-@media screen and (min-width: 300px) and (max-width: 426px) {
+@media screen and (min-width: 50px) and (max-width: 476px) {
     #o3 {
-        width: 100%;
-        max-width: 340px;
+        width: auto;
+        /* max-width: 340px; */
         /* background-color: yellow; */
+    }
+    .container{
+        /* padding: 100px; */
+        margin: 60px;
     }
 }
